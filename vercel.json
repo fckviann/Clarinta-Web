@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/((?!assets/|song.mp3|.*\\..*).*)",
+            "destination": "/index.html"
+        }
+    ]
+}
