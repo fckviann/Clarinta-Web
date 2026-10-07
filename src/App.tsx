@@ -2,28 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { VolumeModal } from './components/volume';
 import { LockModal } from './components/lock';
 
-import foto1 from "./assets/foto1.jpeg";
-import foto2 from "./assets/foto2.jpeg";
-import foto3 from "./assets/foto3.jpeg";
-import foto4 from "./assets/foto4.jpeg";
-import foto5 from "./assets/foto5.jpeg";
-import foto6 from "./assets/foto6.jpeg";
-import foto7 from "./assets/foto7.jpeg";
-import foto8 from "./assets/foto8.jpeg";
-import foto9 from "./assets/foto9.jpeg";
-import foto10 from "./assets/foto10.jpeg";
-import foto11 from "./assets/foto11.jpeg";
-import foto12 from "./assets/foto12.jpeg";
-import foto13 from "./assets/foto13.jpeg";
-import foto14 from "./assets/foto14.jpeg";
-import foto15 from "./assets/foto15.jpeg";
-import foto16 from "./assets/foto16.jpeg";
-import foto17 from "./assets/foto17.jpeg";
-import foto18 from "./assets/foto18.jpeg";
-import foto19 from "./assets/foto19.jpeg";
-import foto20 from "./assets/foto20.jpeg";
-import foto21 from "./assets/foto21.jpeg";
-
 type Slide = {
   image: string;
   alt: string;
@@ -33,7 +11,7 @@ type Slide = {
 
 const slides: Slide[] = [
   {
-    image: foto1,
+    image: "/assets/foto1.jpeg",
     alt: "Foto 1",
     credit: "26 March 2026",
     message: [
@@ -42,7 +20,7 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: foto2,
+    image: "/assets/foto2.jpeg",
     alt: "Foto 2",
     credit: "27 March 2026",
     message: [
@@ -51,7 +29,7 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: foto3,
+    image: "/assets/foto3.jpeg",
     alt: "Foto 3",
     credit: "11 April 2026",
     message: [
@@ -60,7 +38,7 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: foto4,
+    image: "/assets/foto4.jpeg",
     alt: "Foto 4",
     credit: "9 May 2026",
     message: [
@@ -69,7 +47,7 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: foto5,
+    image: "/assets/foto5.jpeg",
     alt: "Foto 5",
     credit: "9 May 2026",
     message: [
@@ -78,7 +56,7 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: foto6,
+    image: "/assets/foto6.jpeg",
     alt: "Foto 6",
     credit: "28 May 2026",
     message: [
@@ -87,7 +65,7 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: foto7,
+    image: "/assets/foto7.jpeg",
     alt: "Foto 7",
     credit: "30 May 2026",
     message: [
@@ -96,7 +74,7 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: foto8,
+    image: "/assets/foto8.jpeg",
     alt: "Foto 8",
     credit: "1 July 2026",
     message: [
@@ -105,7 +83,7 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: foto9,
+    image: "/assets/foto9.jpeg",
     alt: "Foto 9",
     credit: "9 July 2026",
     message: [
@@ -114,7 +92,7 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: foto10,
+    image: "/assets/foto10.jpeg",
     alt: "Foto 10",
     credit: "15 July 2026",
     message: [
@@ -123,7 +101,7 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: foto11,
+    image: "/assets/foto11.jpeg",
     alt: "Foto 11",
     credit: "22 July 2026",
     message: [
@@ -132,7 +110,7 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: foto12,
+    image: "/assets/foto12.jpeg",
     alt: "Foto 12",
     credit: "26 July 2026",
     message: [
@@ -141,7 +119,7 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: foto13,
+    image: "/assets/foto13.jpeg",
     alt: "Foto 13",
     credit: "28 July 2026",
     message: [
@@ -150,7 +128,7 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: foto14,
+    image: "/assets/foto14.jpeg",
     alt: "Foto 14",
     credit: "31 July 2026",
     message: [
@@ -159,7 +137,7 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: foto15,
+    image: "/assets/foto15.jpeg",
     alt: "Foto 15",
     credit: "19 August 2026",
     message: [
@@ -168,16 +146,16 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: foto16,
-    alt: "20 August 2026",
-    credit: "Foto 16",
+    image: "/assets/foto16.jpeg",
+    alt: "Foto 16",
+    credit: "20 August 2026",
     message: [
       "this is our first living together",
       "aku mohon kamu jangan keburu emosi ngebaca part sebelumnya, kamu harus tau bahwa itu aku ketik juga dengan sangat berat, aku ngga pernah mau kehilangan kamu, aku serius saat aku bilang kalau aku takut tentang semua hal, aku takut aku lebih milih temenku, aku takut aku ngerubah sikapku, aku takut aku terbiasa tanpa kamu, dan aku takut aku bisa ngelepas kamu, kalau pada akhirnya kita selesai karena apapun itu, kamu harus tau kalau itu sangat berat buatku, sangat nyakitin aku, and will make me goes really crazy because im fucking love you with all my heart, all my live, all my soul.",
     ],
   },
   {
-    image: foto17,
+    image: "/assets/foto17.jpeg",
     alt: "Foto 17",
     credit: "20 September 2026",
     message: [
@@ -186,7 +164,7 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: foto18,
+    image: "/assets/foto18.jpeg",
     alt: "Foto 18",
     credit: "9 May 2026",
     message: [
@@ -195,7 +173,7 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: foto19,
+    image: "/assets/foto19.jpeg",
     alt: "Foto 19",
     credit: "20 September 2026",
     message: [
@@ -204,7 +182,7 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: foto20,
+    image: "/assets/foto20.jpeg",
     alt: "Foto 20",
     credit: "Forever",
     message: [
@@ -213,7 +191,7 @@ const slides: Slide[] = [
     ],
   },
   {
-    image: foto21,
+    image: "/assets/foto21.jpeg",
     alt: "Foto 21",
     credit: "24 April 2025",
     message: [
