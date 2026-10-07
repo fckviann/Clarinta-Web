@@ -231,11 +231,6 @@ export default function App() {
   useEffect(() => {
     if (!isLocked && currentSlide === 1) {
       setShowVolumeModal(true);
-      if (audioRef.current) {
-        audioRef.current.play().catch((err) => {
-          console.log('Autoplay ditolak browser:', err);
-        });
-      }
     }
   }, [currentSlide, isLocked]);
 
@@ -259,10 +254,18 @@ export default function App() {
           correctBoyfriend="Muhammad Afzal Fulvian Handoni"
           correctGirlfriend="Clarinta Anindya Mirabel"
           correctDate="28/05/2026"
-          onSuccess={() => setIsLocked(false)}
+          onSuccess={() => {
+            setIsLocked(false);
+
+            if (audioRef.current) {
+              audioRef.current.volume = volume;
+              audioRef.current.play().catch((err) => {
+                console.error("Audio gagal diputar:", err);
+              });
+            }
+          }}
         />
       )}
-
       {!isLocked && (
         <div className="story-shell">
           <header className="story-header">
